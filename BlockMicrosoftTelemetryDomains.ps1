@@ -15,8 +15,8 @@ Write-Host "Script Copied Successfully From $sourcePath to $destinationPath"
 # create scheduled task for script
 $taskName = "BlockMicrosoftTelemetryDomains"
 $scriptPath = "C:\Windows\BlockMicrosoftTelemetryDomains.ps1"
-$taskDescription = "This Task Updates the Domains to Block at Logon."
-$trigger = New-ScheduledTaskTrigger -AtLogon
+$taskDescription = "This Task Updates the Domains to Block at Startup."
+$trigger = New-ScheduledTaskTrigger -AtStartup
 $action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"$scriptPath`""
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable
 $principal = New-ScheduledTaskPrincipal -UserId "SYSTEM" -LogonType ServiceAccount
