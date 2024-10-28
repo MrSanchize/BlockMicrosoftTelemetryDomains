@@ -9,7 +9,7 @@ $hostsFile = "C:\Windows\System32\drivers\etc\hosts"
 # path to backup the current hosts file
 $backupPath = "C:\Windows\System32\drivers\etc\hosts.bak"
 
-# default hosts file content
+# hosts file content
 $defaultHostsContent = @"
 # Copyright (c) 1993-2009 Microsoft Corp.
 #
@@ -32,6 +32,33 @@ $defaultHostsContent = @"
 # localhost name resolution is handle within DNS itself.
 #       127.0.0.1       localhost
 #       ::1             localhost
+
+# Block Razer and ASUS Downloads
+#
+0.0.0.0 synapse3ui-common.razerzone.com
+0.0.0.0 bespoke-analytics.razerapi.com
+0.0.0.0 discovery.razerapi.com
+0.0.0.0 manifest.razerapi.com
+0.0.0.0 cdn.razersynapse.com
+0.0.0.0 assets.razerzone.com
+0.0.0.0 assets2.razerzone.com
+0.0.0.0 deals-assets-cdn.razerzone.com
+0.0.0.0 synapse-3-webservice.razerzone.com
+0.0.0.0 albedozero.razerapi.com
+0.0.0.0 gms.razersynapse.com
+0.0.0.0 fs.razersynapse.com
+0.0.0.0 id.razer.com
+0.0.0.0 liveupdate01s.asus.com
+0.0.0.0 asusactivateservice.azurewebsites.net
+0.0.0.0 rog-live-service.asus.com
+0.0.0.0 dlcdn-rogboxbu1.asus.com
+0.0.0.0 dlcdn-rogboxbu2.asus.com
+0.0.0.0 mymessage.asus.com
+0.0.0.0 gaming-config.asus.com
+0.0.0.0 rog-content-platform.asus.com
+0.0.0.0 nomos.asus.com
+0.0.0.0 dlcdnrog.asus.com
+0.0.0.0 account.asus.com
 
 "@
 
